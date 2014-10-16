@@ -13,10 +13,10 @@ pollutantmean <- function(directory, pollutant, id, summarize = FALSE)
   combined <- do.call(rbind, dataselect)
   
   ## REMOVES "NA" FROM SELECTED .CSV FILES (NOT NECESARY LINE)
-  datafilter <- c(combined[[pollutant]], na.rm=TRUE) 
+  datafilter <- na.omit(combined[[pollutant]]) 
   
   ## CALCULATES MEAN OF COMBINED DATA .CSV FILES WITHOUT "NA"
-  combinedmean <- mean(datafilter, na.rm=TRUE)
+  combinedmean <- mean(combined, na.rm=TRUE)
   
   return (combinedmean)
 }
