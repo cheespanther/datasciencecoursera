@@ -1,4 +1,4 @@
-## ONLY WORKS FOR ONE ENTRY
+## RETURNS NULL FOR NOBS :-(
 
 complete <- function(directory, id = 1:322) 
 {
