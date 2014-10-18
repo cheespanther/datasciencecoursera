@@ -1,6 +1,6 @@
 ## ONLY WORKS FOR ONE ENTRY
 
-completecases <- function(directory, id = 1:322) 
+complete <- function(directory, id = 1:322) 
 {
   setwd("~/R/R/specdata")
   for(i in id){
